@@ -48,19 +48,19 @@ Disponível para trabalho híbrido com suporte de deslocamento.
 ## 👨‍💻 Experiência Profissional
 
 ### Analista de TI & Técnico de Hardware
-**2021 - Presente** | Presencial  
+**2021 ** | Presencial  
 - Suporte técnico e manutenção de hardware
 - Implementação de soluções de TI para empresas
 - Gestão de infraestrutura de rede
 
 ### Freelancer em Cybersecurity
-**2020 - Presente** | Plataformas BugCrowd/HackerOne  
+**2022 - Presente** | Plataformas BugCrowd/HackerOne  
 - Identificação e reporte de vulnerabilidades
 - Pentesting em aplicações web/mobile
 - Análise forense de incidentes de segurança
 
 ### Desenvolvedor Freelancer
-**2021 - Presente**  
+**2023 - Presente**  
 - Desenvolvimento de scripts de automação em Python
 - Criação de aplicações web com JavaScript/React
 - Implementação de soluções WordPress
@@ -71,12 +71,12 @@ Disponível para trabalho híbrido com suporte de deslocamento.
 
 ### Engenharia Informática
 **Universidade** | 2º ano da Licenciatura  
-*2021 - Presente*  
+*2022 - Presente*  
 - Foco em segurança cibernética e desenvolvimento de software
 
 ### Técnico de Informática
 **Curso Técnico**  
-*2018 - 2020*  
+*2022*  
 - Especialização em hardware, redes e fundamentos de programação
 
 ---
@@ -84,14 +84,14 @@ Disponível para trabalho híbrido com suporte de deslocamento.
 ## 📚 Formação Complementar
 
 ### Power Learn Project (África)
-**2023 - Presente**  
+**2025 - Presente**  
 - Formação em desenvolvimento de software
 - Tecnologias: Flutter, Dart, JavaScript avançado
 - Projetos práticos com foco em soluções africanas
 
 ### Certificações
-- HackerOne (Ativo desde 2020)
-- BugCrowd (Ativo desde 2020)
+- HackerOne (Ativo desde 2023)
+- BugCrowd (Ativo desde 2024)
 - Cybersecurity Fundamentals (em progresso)
 
 ---
