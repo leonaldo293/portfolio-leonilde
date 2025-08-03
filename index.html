@@ -1,143 +1,1169 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Leonilde da Silva Mendes - Portfólio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f3f4f6;
-      color: #111827;
-    }
-    header {
-      background-color: #111827;
-      color: white;
-      padding: 1.5rem;
-      text-align: center;
-    }
-    main {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
-    section {
-      margin-bottom: 2rem;
-    }
-    h1, h2 {
-      color: #1f2937;
-    }
-    ul {
-      padding-left: 1.2rem;
-    }
-    a {
-      color: #2563eb;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    footer {
-      background-color: #1f2937;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-    }
-    .contato span {
-      display: block;
-      margin-top: 0.3rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leonilde Mendes | Cybersecurity & FullStack Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #4f46e5;
+            --dark: #0f172a;
+            --darker: #020617;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --accent: #ec4899;
+            --cyber-blue: #00ffff;
+            --cyber-green: #00ff9d;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, var(--darker), var(--dark));
+            color: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(79, 70, 229, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 50% 50%, rgba(236, 72, 153, 0.05) 0%, transparent 30%);
+            z-index: -1;
+        }
+
+        .cyber-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+                linear-gradient(180deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+            background-size: 30px 30px;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(79, 70, 229, 0.2);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--light);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        .logo span {
+            color: var(--cyber-green);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--gray);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-links a:hover {
+            color: var(--cyber-green);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--cyber-green);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--light);
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            min-height: 100vh;
+            padding-top: 80px;
+        }
+
+        .hero-content {
+            flex: 1;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .hero-image::before {
+            content: '';
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--primary), transparent 70%);
+            filter: blur(80px);
+            opacity: 0.3;
+            z-index: -1;
+        }
+
+        .profile-card {
+            background: rgba(15, 23, 42, 0.7);
+            border: 1px solid rgba(79, 70, 229, 0.3);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            max-width: 400px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .profile-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--cyber-blue), var(--cyber-green));
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid var(--cyber-green);
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(45deg, var(--dark), var(--darker));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .profile-img i {
+            font-size: 5rem;
+            color: var(--cyber-green);
+        }
+
+        .profile-card h2 {
+            text-align: center;
+            margin-bottom: 0.5rem;
+            font-size: 1.8rem;
+        }
+
+        .profile-card p {
+            text-align: center;
+            color: var(--cyber-blue);
+            margin-bottom: 1.5rem;
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            margin-top: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--gray);
+            transition: var(--transition);
+        }
+
+        .contact-item:hover {
+            color: var(--cyber-green);
+        }
+
+        .contact-item i {
+            color: var(--cyber-blue);
+            width: 24px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            color: var(--cyber-green);
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero h1 span::after {
+            content: '';
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: rgba(0, 255, 157, 0.2);
+            z-index: -1;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+
+        .cyber-text {
+            font-family: 'Roboto Mono', monospace;
+            color: var(--cyber-blue);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+            border: 1px solid var(--cyber-blue);
+            padding: 0.3rem 1rem;
+            border-radius: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: transparent;
+            color: var(--cyber-green);
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            border: 1px solid var(--cyber-green);
+            font-family: 'Roboto Mono', monospace;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 157, 0.1), transparent);
+            transform: translateX(-100%);
+            transition: var(--transition);
+        }
+
+        .btn:hover {
+            background: rgba(0, 255, 157, 0.05);
+            box-shadow: 0 0 20px rgba(0, 255, 157, 0.2);
+            transform: translateY(-3px);
+        }
+
+        .btn:hover::before {
+            transform: translateX(100%);
+        }
+
+        .btn-primary {
+            background: rgba(0, 255, 157, 0.1);
+            border-color: var(--cyber-green);
+            margin-right: 1rem;
+            margin-left: 1rem;
+        }
+
+        /* Sections */
+        .section-title {
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 1rem;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: var(--cyber-green);
+            border-radius: 2px;
+        }
+
+        .section-title .subtitle {
+            color: var(--cyber-blue);
+            font-family: 'Roboto Mono', monospace;
+            margin-top: 0.5rem;
+            font-size: 1rem;
+        }
+
+        /* About */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--cyber-green);
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: var(--gray);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .info-item {
+            background: rgba(15, 23, 42, 0.5);
+            border: 1px solid rgba(79, 70, 229, 0.2);
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+
+        .info-item:hover {
+            border-color: var(--cyber-green);
+            transform: translateY(-5px);
+        }
+
+        .info-item h4 {
+            color: var(--cyber-green);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .info-item p {
+            margin-bottom: 0;
+            font-size: 0.9rem;
+        }
+
+        /* Skills */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+
+        .skill-category {
+            background: rgba(15, 23, 42, 0.5);
+            border: 1px solid rgba(79, 70, 229, 0.2);
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+
+        .skill-category:hover {
+            border-color: var(--cyber-green);
+            transform: translateY(-5px);
+        }
+
+        .skill-category h3 {
+            color: var(--cyber-green);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .skill-category h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 2px;
+            background: var(--cyber-green);
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .skill-list li::before {
+            content: '▹';
+            color: var(--cyber-blue);
+            font-size: 0.8rem;
+        }
+
+        /* Experience */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--cyber-blue), var(--cyber-green));
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            width: 50%;
+            padding: 1.5rem;
+            background: rgba(15, 23, 42, 0.5);
+            border: 1px solid rgba(79, 70, 229, 0.2);
+            border-radius: 8px;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 24px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--cyber-green);
+            border: 3px solid var(--dark);
+        }
+
+        .timeline-item:nth-child(odd)::before {
+            right: -10px;
+        }
+
+        .timeline-item:nth-child(even)::before {
+            left: -10px;
+        }
+
+        .timeline-date {
+            color: var(--cyber-blue);
+            font-family: 'Roboto Mono', monospace;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .timeline-content h3 {
+            color: var(--cyber-green);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content p {
+            color: var(--gray);
+        }
+
+        /* Contact */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+        }
+
+        .contact-info {
+            background: rgba(15, 23, 42, 0.5);
+            border: 1px solid rgba(79, 70, 229, 0.2);
+            padding: 3rem;
+            border-radius: 15px;
+        }
+
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--cyber-green);
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .contact-item i {
+            font-size: 1.2rem;
+            color: var(--cyber-blue);
+            margin-top: 0.3rem;
+        }
+
+        .contact-form {
+            background: rgba(15, 23, 42, 0.5);
+            border: 1px solid rgba(79, 70, 229, 0.2);
+            padding: 3rem;
+            border-radius: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--light);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            background: rgba(15, 23, 42, 0.7);
+            border: 1px solid rgba(79, 70, 229, 0.3);
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: var(--transition);
+            color: var(--light);
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--cyber-green);
+            box-shadow: 0 0 0 3px rgba(0, 255, 157, 0.1);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--darker);
+            padding: 4rem 0 2rem;
+            border-top: 1px solid rgba(79, 70, 229, 0.2);
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--light);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            color: var(--cyber-blue);
+            transition: var(--transition);
+            border: 1px solid rgba(79, 70, 229, 0.3);
+        }
+
+        .social-links a:hover {
+            background: rgba(0, 255, 157, 0.1);
+            color: var(--cyber-green);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 3rem;
+            color: var(--gray);
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 3rem;
+        }
+
+        /* Responsividade */
+        @media (max-width: 992px) {
+            .hero {
+                flex-direction: column;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .skills-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline::before {
+                left: 30px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                left: 0 !important;
+                padding-left: 70px;
+            }
+            
+            .timeline-item::before {
+                left: 20px !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                right: -100%;
+                flex-direction: column;
+                background: rgba(15, 23, 42, 0.95);
+                backdrop-filter: blur(10px);
+                width: 70%;
+                height: calc(100vh - 80px);
+                padding: 2rem;
+                transition: var(--transition);
+                z-index: 100;
+                border-left: 1px solid rgba(79, 70, 229, 0.2);
+            }
+            
+            .nav-links.active {
+                right: 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 578px) {
+            .btn {
+                display: block;
+                width: 100%;
+                margin-bottom: 1rem;
+                text-align: center;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
+    <div class="cyber-grid"></div>
+    
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Leonilde<span>Mendes</span></a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="nav-links" id="navLinks">
+                    <a href="#home">Início</a>
+                    <a href="#about">Sobre</a>
+                    <a href="#skills">Habilidades</a>
+                    <a href="#experience">Experiência</a>
+                    <a href="#contact">Contato</a>
+                </div>
+            </nav>
+        </div>
+    </header>
 
-  <header>
-    <h1>Leonilde da Silva Mendes</h1>
-    <p>Desenvolvedor Full Cycle & Especialista em Cibersegurança</p>
-  </header>
-
-  <main>
-
-    <section id="sobre">
-      <h2>🧑‍💻 Sobre Mim</h2>
-      <p>Sou Leonilde da Silva Mendes, de Angola. Estudo Engenharia Informática (2º ano) e atuo há mais de 3 anos nas áreas de IT, desenvolvimento backend e segurança cibernética. Tenho experiência com bug bounty nas plataformas HackerOne e BugCrowd. Trabalho com diversas linguagens e ferramentas modernas, focando especialmente em automação, backend e infraestrutura segura.</p>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="cyber-text">Cybersecurity Specialist & FullStack Developer</span>
+                <h1>Leonilde da Silva <span>Mendes</span></h1>
+                <p>Analista de TI e desenvolvedor com foco em segurança cibernética, buscando oportunidades para aplicar conhecimentos em hacking ético e desenvolvimento seguro.</p>
+                <center>
+                    <div class="hero-btns">
+                        <a href="#contact" class="btn btn-primary">Contrate-me</a>
+                        <a href="#projects" class="btn">Ver Projetos</a>
+                        <a href="curriculo-leonilde.pdf" class="btn btn-primary">Ver Curriculum</a>
+                    </div>
+                </center>
+               
+            </div>
+            <div class="hero-image">
+                <div class="profile-card">
+                    <div class="profile-img">
+            <img src="leon.jpg" alt="" width="145px">
+                        <i class=""></i>
+                    </div>
+                    <h2>Leonilde Mendes</h2>
+                    <p>Cybersecurity & FullStack Developer</p>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Angola</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>leonaldomendes293@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <span>linkedin.com/in/leonilde-da-silva-mendes</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-github"></i>
+                            <span>github.com/leonaldo293</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+244 939 947819 | +244 954378408</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="formacao">
-      <h2>🎓 Formação Acadêmica</h2>
-      <ul>
-        <li>Técnico Médio em Informática</li>
-        <li>Licenciatura em Engenharia Informática (em curso - 2º ano)</li>
-        <li>Formação contínua: Power Learn Project (África)</li>
-      </ul>
-      <p><a href="curriculo-leonilde.pdf" download>📄 Baixar Currículo</a></p>
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Sobre Mim</h2>
+                <div class="subtitle">Minha jornada em tecnologia e segurança</div>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Desenvolvedor FullStack & Especialista em Segurança</h3>
+                    <p>Sou Leonilde da Silva Mendes, de Angola. Concluí o ensino médio como Técnico de Informática e atualmente estou no 2º ano de Engenharia Informática na universidade.</p>
+                    <p>Trabalho como Analista de TI e Técnico de Hardware, com experiência prática em segurança cibernética atuando nas plataformas HackerOne e BugCrowd. Tenho sólidos conhecimentos em desenvolvimento FullStack com foco em backend, e estou constantemente buscando aprender e me certificar na área de segurança.</p>
+                    <p>Meu objetivo é encontrar oportunidades remotas ou presenciais em TI, especialmente em segurança cibernética, onde possa aplicar meus conhecimentos em hacking ético e segurança forense.</p>
+                    
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <h4>Educação</h4>
+                            <p>Engenharia Informática (2º ano)</p>
+                            <p>Técnico de Informática</p>
+                        </div>
+                        <div class="info-item">
+                            <h4>Idiomas</h4>
+                            <p>Português (Nativo)</p>
+                            <p>Inglês (Intermediário)</p>
+                        </div>
+                        <div class="info-item">
+                            <h4>Disponibilidade</h4>
+                            <p>Remoto | Presencial | Híbrido</p>
+                        </div>
+                        <div class="info-item">
+                            <h4>Interesses</h4>
+                            <p>Cybersecurity | Pentesting | DevSecOps</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="info-item" style="height: 100%;">
+                        <h4>Formação Atual</h4>
+                        <p>Power Learn Project (África)</p>
+                        <p>Estou aprendendo Flutter, Dart e aprofundando conhecimentos em programação com foco em segurança</p>
+                        
+                        <h4 style="margin-top: 1.5rem;">Objetivos Profissionais</h4>
+                        <p>Busco uma vaga como programador ou especialista em segurança cibernética para aplicar meus conhecimentos em:</p>
+                        <ul style="margin-top: 0.5rem; padding-left: 1.5rem;">
+                            <li>Hacking Ético</li>
+                            <li>Segurança Forense</li>
+                            <li>Desenvolvimento Seguro</li>
+                            <li>Análise de Vulnerabilidades</li>
+                        </ul>
+                        
+                        <h4 style="margin-top: 1.5rem;">Disponibilidade</h4>
+                        <p>Estou disponível para trabalho híbrido caso seja possível cobrir os custos de deslocamento.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="linguagens">
-      <h2>💻 Linguagens e Tecnologias</h2>
-      <ul>
-        <li>Python, Golang, JavaScript, HTML, CSS, Java (noções), Dart (aprendendo)</li>
-        <li>Next.js, WordPress</li>
-        <li>Docker, Kubernetes, Kafka Connect, Elastic Stack</li>
-        <li>Segurança Cibernética, Automação, CI/CD</li>
-        <li>Banco de dados, Git, GitHub</li>
-      </ul>
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <div class="section-title">
+                <h2>Habilidades Técnicas</h2>
+                <div class="subtitle">Conhecimentos em desenvolvimento e segurança</div>
+            </div>
+            
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Cybersecurity</h3>
+                    <ul class="skill-list">
+                        <li>Hacking Ético</li>
+                        <li>Segurança Forense</li>
+                        <li>Análise de Vulnerabilidades</li>
+                        <li>HackerOne & BugCrowd</li>
+                        <li>Pentesting</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <ul class="skill-list">
+                        <li>Python (Automação)</li>
+                        <li>JavaScript/Node.js</li>
+                        <li>Java (Noções)</li>
+                        <li>Golang</li>
+                        <li>APIs REST</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Frontend & Mobile</h3>
+                    <ul class="skill-list">
+                        <li>HTML, CSS, JavaScript</li>
+                        <li>React/Next.js</li>
+                        <li>Flutter (Aprendendo)</li>
+                        <li>Dart (Aprendendo)</li>
+                        <li>WordPress</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>DevOps & Outros</h3>
+                    <ul class="skill-list">
+                        <li>Docker & Kubernetes</li>
+                        <li>Kafka Connect</li>
+                        <li>Elastic Stack</li>
+                        <li>Bancos de Dados</li>
+                        <li>FullCycle Development</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="interesses">
-      <h2>💡 Interesses</h2>
-      <ul>
-        <li>Segurança Cibernética e Forense Digital</li>
-        <li>Hacking Ético e Bug Bounty</li>
-        <li>DevOps com containers e automações</li>
-        <li>Desenvolvimento Backend e APIs</li>
-        <li>Monitoramento com Elastic Stack</li>
-        <li>Comunidades tech africanas</li>
-      </ul>
+    <!-- Experience Section -->
+    <section id="experience" style="background: rgba(15, 23, 42, 0.3);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Experiência & Formação</h2>
+                <div class="subtitle">Minha jornada profissional e acadêmica</div>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2025 </div>
+                    <div class="timeline-content">
+                        <h3>Analista de TI & Técnico de Hardware</h3>
+                        <p>Trabalho presencial com suporte técnico, manutenção de hardware e soluções de TI para empresas e clientes.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2023 - Presente</div>
+                    <div class="timeline-content">
+                        <h3>Freelancer em Cybersecurity</h3>
+                        <p>Atuação nas plataformas HackerOne e BugCrowd identificando vulnerabilidades e reportando bugs de segurança.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2023 - Presente</div>
+                    <div class="timeline-content">
+                        <h3>Engenharia Informática</h3>
+                        <p>Universidade - 2º ano da licenciatura, com foco em desenvolvimento de software e segurança cibernética.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2025 - Presente</div>
+                    <div class="timeline-content">
+                        <h3>Power Learn Project</h3>
+                        <p>Formação em desenvolvimento de software com foco em tecnologias modernas e habilidades de programação.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2022</div>
+                    <div class="timeline-content">
+                        <h3>Técnico de Informática</h3>
+                        <p>Curso técnico com foco em hardware, redes e fundamentos de programação.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="projetos">
-      <h2>🛠️ Projetos</h2>
-      <ul>
-        <li><strong>Bug Hunting:</strong> Atuação contínua em programas de vulnerabilidades (HackerOne e BugCrowd)</li>
-        <li><strong>Automação com Python:</strong> Scripts para gestão de sistemas e logs</li>
-        <li><strong>Portfólios e Sites:</strong> Web com WordPress, HTML, CSS e JS</li>
-      </ul>
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Entre em Contato</h2>
+                <div class="subtitle">Vamos trabalhar juntos!</div>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Informações de Contato</h3>
+                    <p>Estou disponível para projetos freelance, colaborações ou oportunidades de trabalho em tempo integral.</p>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Localização</h4>
+                            <p>Angola</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Telefone</h4>
+                            <p>+244 939 947819</p>
+                            <p>+244 954378408</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>leonaldomendes293@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <div>
+                            <h4>LinkedIn</h4>
+                            <p>linkedin.com/in/leonilde-da-silva-mendes</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <div>
+                            <h4>GitHub</h4>
+                            <p>github.com/leonaldo293</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Envie uma mensagem</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nome Completo</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Assunto</label>
+                            <input type="text" id="subject" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="contato">
-      <h2>📬 Entre em Contato</h2>
-      <div class="contato">
-        <span>📱 +244 939 947 819</span>
-        <span>📱 +244 954 378 408</span>
-        <span>🌐 GitHub: <a href="https://github.com/leonaldo293" target="_blank">github.com/leonaldo293</a></span>
-        <span>🔗 LinkedIn: <a href="https://linkedin.com/in/leonilde-da-silva-mendes" target="_blank">linkedin.com/in/leonilde-da-silva-mendes</a></span>
-      </div>
-    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Leonilde<span style="color: var(--cyber-green);">Mendes</span></div>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/leonilde-da-silva-mendes" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/leonaldo293" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://x.com/MendesM20219" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="http://www.instagram.com/leon_messi273" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Leonilde da Silva Mendes. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
 
-    <section id="formulario">
-      <h2>📩 Formulário de Contato</h2>
-      <form action="mailto:seuemail@dominio.com" method="post" enctype="text/plain">
-        <label for="nome">Nome:</label><br>
-        <input type="text" id="nome" name="nome" required><br><br>
+    <script>
+        // Função para rolagem suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Fecha o menu móvel se estiver aberto
+                    document.getElementById('navLinks').classList.remove('active');
+                }
+            });
+        });
 
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
+        // Menu móvel
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('active');
+        });
 
-        <label for="mensagem">Mensagem:</label><br>
-        <textarea id="mensagem" name="mensagem" rows="5" required></textarea><br><br>
+        // Fecha o menu ao clicar em um link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
 
-        <input type="submit" value="Enviar">
-      </form>
-    </section>
+        // Formulário de contato
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Mensagem enviada com sucesso! Entrarei em contato em breve.');
+            this.reset();
+        });
 
-  </main>
-
-  <footer>
-    <p>© 2025 Leonilde da Silva Mendes. Todos os direitos reservados.</p>
-  </footer>
-
+        // Efeito de digitação no título
+        const cyberText = document.querySelector('.cyber-text');
+        const originalText = cyberText.textContent;
+        cyberText.textContent = '';
+        
+        let i = 0;
+        const typeWriter = () => {
+            if (i < originalText.length) {
+                cyberText.textContent += originalText.charAt(i);
+                i++;
+                setTimeout(typeWriter, 50);
+            }
+        };
+        
+        setTimeout(typeWriter, 1000);
+    </script>
 </body>
 </html>
