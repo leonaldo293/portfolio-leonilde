@@ -6,7 +6,7 @@ Angola · +244 939 947819 · +244 954378408
 Email: [leonaldomendes293@gmail.com](mailto:leonaldomendes293@gmail.com)
 
 ---
-link My portofolio:[github.com/leonaldo293/portofolio-leonilde](https://leonaldo293.github.io/portfolio-leonilde) .
+link to My portofolio:[github.com/leonaldo293/portofolio-leonilde](https://leonaldo293.github.io/portfolio-leonilde) .
 ---
 ## 🎯 Career Objective
 I am seeking remote or in-person opportunities in **cybersecurity** and development, with a focus on:
