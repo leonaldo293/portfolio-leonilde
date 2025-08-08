@@ -47,19 +47,19 @@ Available for hybrid work with commuting support.
 ## 👨‍💻 Professional Experience
 
 ### IT Analyst & Hardware Technician
-**2021 - 2023** | In-Person
+**2021 - 2023** |
 - Technical support and hardware maintenance
 - Implementation of IT solutions for companies
 - Network infrastructure management
 
 ### Cybersecurity Freelancer
-**2022 - Present** | BugCrowd/HackerOne Platforms
+**2022** | BugCrowd/HackerOne Platforms
 - Vulnerability identification and reporting
 - Pentesting of web/mobile applications
 - Forensic analysis of security incidents
 
 ### Freelance Developer
-**2023 - Present**
+**2023**
 - Development of automation scripts in Python
 - Creation of web applications with JavaScript/React
 - Implementation of WordPress solutions
@@ -74,7 +74,7 @@ Available for hybrid work with commuting support.
 - Focus on cybersecurity and software development
 - ### IT Technician
 **Technical Course**
-*2022*
+**2022**
 - Specialization in hardware, networking, and programming fundamentals
 
 ---
